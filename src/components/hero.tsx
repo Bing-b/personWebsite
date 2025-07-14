@@ -135,28 +135,31 @@ export default function Hero() {
         </div>
       </MotionItem>
 
-      <p className="text-[#707070] text-sm mt-[100px]">本站技术支持</p>
+      <MotionItem delay={0.8}>
+        <p className="text-[#707070] text-sm mt-[100px]">本站技术支持</p>
+      </MotionItem>
+      <MotionItem delay={1}>
+        <div className="flex items-center gap-10 mt-10">
+          {technicals.map((item, index) => (
+            <div className="flex gap-2 items-center grayscale hover:grayscale-0">
+              <img
+                className={`inline-block max-h-[30px] ${
+                  index === 0 ? "h-[50px]" : ""
+                }  ${index === 4 ? "h-[20px]" : ""}`}
+                src={item.icon}
+              />
 
-      <div className="flex items-center gap-10 mt-10">
-        {technicals.map((item, index) => (
-          <div className="flex gap-2 items-center grayscale hover:grayscale-0">
-            <img
-              className={`inline-block max-h-[30px] ${
-                index === 0 ? "h-[50px]" : ""
-              }  ${index === 4 ? "h-[20px]" : ""}`}
-              src={item.icon}
-            />
-
-            <p
-              className={`font-bold text-[#767676] hover:text-[#333] ${
-                item.text ? "block" : "hidden"
-              } `}
-            >
-              {item.text}
-            </p>
-          </div>
-        ))}
-      </div>
+              <p
+                className={`font-bold text-[#767676] hover:text-[#333] ${
+                  item.text ? "block" : "hidden"
+                } `}
+              >
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </MotionItem>
     </div>
   );
 }

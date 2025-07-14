@@ -2,32 +2,34 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
+import { div, img, p } from "motion/react-client";
 
 const images = ["/images/wise.webp", "/images/dropbox.webp"];
 
 const technicals = [
   {
-    icon: "/next.svg",
+    icon: "/images/nextjs.svg",
     text: "",
   },
   {
-    icon: "/images/tailwindcss",
+    icon: "/images/tailwindcss.svg",
     text: "tailwindcss",
   },
   {
-    icon: "",
-    text: "",
+    icon: "/images/React.svg",
+    text: "React",
   },
   {
-    icon: "",
-    text: "",
+    icon: "/images/motion.avif",
+    text: "Motion",
   },
   {
-    icon: "",
-    text: "",
+    icon: "/images/Typescript.svg",
+    text: "Typescript",
   },
+
   {
-    icon: "",
+    icon: "/images/eslint.svg",
     text: "",
   },
 ];
@@ -135,7 +137,26 @@ export default function Hero() {
 
       <p className="text-[#707070] text-sm mt-[100px]">本站技术支持</p>
 
-      <div></div>
+      <div className="flex items-center gap-10 mt-10">
+        {technicals.map((item, index) => (
+          <div className="flex gap-2 items-center grayscale hover:grayscale-0">
+            <img
+              className={`inline-block max-h-[30px] ${
+                index === 0 ? "h-[50px]" : ""
+              }  ${index === 4 ? "h-[20px]" : ""}`}
+              src={item.icon}
+            />
+
+            <p
+              className={`font-bold text-[#767676] hover:text-[#333] ${
+                item.text ? "block" : "hidden"
+              } `}
+            >
+              {item.text}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

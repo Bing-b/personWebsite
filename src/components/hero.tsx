@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
-import { div, img, p } from "motion/react-client";
 
+// 顶部logo
 const images = ["/images/wise.webp", "/images/dropbox.webp"];
 
+// 本站技术支持
 const technicals = [
   {
     icon: "/images/nextjs.svg",
@@ -119,13 +120,13 @@ export default function Hero() {
         <div className="mt-14 flex items-center gap-5">
           <a
             href=""
-            className="inline-block px-4 py-2 bg-[#333] hover:bg-black text-white rounded-4xl text-sm  duration-300 transition"
+            className="inline-block px-4 h-[36px] py-2 bg-[#333] hover:bg-black text-white rounded-4xl text-sm  duration-300 transition"
           >
             进入博客
           </a>
           <a
             href=""
-            className="relative  px-4 py-2 font-bold rounded-full flex  text-sm gap-2 items-center justify-center   hover:bg-[#4040400f]  hover:shadow-border-[#4040403d] cursor-pointer transition-colors ease-out border border-[#40404029]"
+            className="relative  px-4 py-2  h-[36px] font-bold rounded-full flex  text-sm gap-2 items-center justify-center   hover:bg-[#4040400f]  hover:shadow-border-[#4040403d] cursor-pointer transition-colors ease-out border border-[#40404029]"
           >
             Get my phone
             <div className="w-6 h-6  rounded-full bg-[#40404014] p-1">
@@ -141,7 +142,10 @@ export default function Hero() {
       <MotionItem delay={1}>
         <div className="flex items-center gap-10 mt-10">
           {technicals.map((item, index) => (
-            <div className="flex gap-2 items-center grayscale hover:grayscale-0">
+            <div
+              key={index}
+              className="flex gap-2 items-center grayscale hover:grayscale-0"
+            >
               <img
                 className={`inline-block max-h-[30px] ${
                   index === 0 ? "h-[50px]" : ""

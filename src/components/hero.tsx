@@ -4,7 +4,13 @@ import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
 // 顶部logo
-const images = ["/images/wise.webp", "/images/dropbox.webp"];
+const images = [
+  "/images/wise.webp",
+  "/images/dropbox.webp",
+  "/images/cosmos.webp",
+  "/images/airbnb.webp",
+  "/images/loom.webp",
+];
 
 // 本站技术支持
 const technicals = [
@@ -30,8 +36,8 @@ const technicals = [
   },
 
   {
-    icon: "/images/eslint.svg",
-    text: "",
+    icon: "/images/GSAP.svg",
+    text: "GSAP",
   },
 ];
 
@@ -120,15 +126,16 @@ export default function Hero() {
         <div className="mt-14 flex items-center gap-5">
           <a
             href=""
-            className="inline-block px-4 h-[36px] py-2 bg-[#333] hover:bg-black text-white rounded-4xl text-sm  duration-300 transition"
+            className="flex items-center gap-1 px-4 h-[36px] py-2 bg-[#333] hover:bg-black text-white rounded-4xl text-sm  duration-300 transition"
           >
-            进入博客
+            <img className="w-4" src="/images/cat.svg" alt="" />
+            花猫乐园
           </a>
           <a
             href=""
             className="relative  px-4 py-2  h-[36px] font-bold rounded-full flex  text-sm gap-2 items-center justify-center   hover:bg-[#4040400f]  hover:shadow-border-[#4040403d] cursor-pointer transition-colors ease-out border border-[#40404029]"
           >
-            Get my phone
+            访问 Banbing
             <div className="w-6 h-6  rounded-full bg-[#40404014] p-1">
               <img className="w-4" src="/images/right_arrow.svg" alt="" />
             </div>
@@ -137,19 +144,19 @@ export default function Hero() {
       </MotionItem>
 
       <MotionItem delay={0.8}>
-        <p className="text-[#707070] text-sm mt-[100px]">本站技术支持</p>
+        <p className="text-[#707070] text-sm mt-[100px]">感谢本站技术支持</p>
       </MotionItem>
       <MotionItem delay={1}>
         <div className="flex items-center gap-10 mt-10">
           {technicals.map((item, index) => (
             <div
               key={index}
-              className="flex gap-2 items-center grayscale hover:grayscale-0"
+              className="flex gap-2 items-center transition duration-300 grayscale hover:grayscale-0 hover:scale-110"
             >
               <img
-                className={`inline-block max-h-[30px] ${
+                className={`inline-block max-h-[28px] ${
                   index === 0 ? "h-[50px]" : ""
-                }  ${index === 4 ? "h-[20px]" : ""}`}
+                }   ${index === 5 ? "h-[24px]" : ""}`}
                 src={item.icon}
               />
 

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "@/components/hero";
 import Works from "@/components/works";
 import Skills from "@/components/skills";
@@ -6,17 +5,13 @@ import Skills from "@/components/skills";
 export default function Home() {
   return (
     <div className="relative h-full">
-      <header className=" flex justify-between  w-[584px] rounded-full bg-[hsla(0,0%,93%,0.72)] backdrop-blur-xl absolute left-1/2 top-6 z-10 -translate-x-1/2 items-center gap-x-24 px-7 py-3">
-        <Image
-          src="/images/logo.svg"
-          alt="Vercel Logo"
-          width={118}
-          height={30}
-          className="dark:invert"
-          priority
-        />
+      <header className="fixed  flex justify-between  w-[584px] rounded-full bg-[hsla(0,0%,93%,0.72)] backdrop-blur-xl  left-1/2 top-6 z-10 -translate-x-1/2 items-center gap-x-24 px-7 py-4">
+        <div className="flex items-center gap-1">
+          <img className="w-[40px]" src="/images/logo.png" alt="" />
+          <p className="font-bold text-xl">Bing</p>
+        </div>
 
-        <a href="">
+        <a href="https://github.com/Bing-b" target="_blank">
           <div className="group relative flex items-center">
             <button>
               <svg

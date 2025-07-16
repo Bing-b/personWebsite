@@ -12,6 +12,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 const workList = [
   "/images/p1.png",
@@ -49,10 +50,22 @@ export default function Works() {
   return (
     <div
       ref={containerRef}
-      className="mt-[60px] relative mx-auto max-w-[1480px] h-[850px] bg-[#4040400f] rounded-4xl px-[40px] pt-[60px] "
+      className="mt-[60px] relative mx-auto max-w-[1600px] h-[850px] bg-[#4040400f] rounded-4xl px-[80px] pt-[60px] "
     >
-      <div className="w-full   overflow-hidden">
-        <div className="flex w-[300vw] h-auto">
+      <div className="w-full  bg-white py-5 px-6  overflow-hidden rounded-4xl">
+        <div className="flex items-center gap-5">
+          <Image
+            src="/images/logo.png"
+            alt="Vercel Logo"
+            width={40}
+            height={30}
+            className="dark:invert"
+            priority
+          />
+          <p>个人作品</p>
+        </div>
+
+        <div className="flex w-[250vw] h-auto">
           {workList.map((text, i) => (
             <div key={i} className="slide  flex items-center justify-center ">
               <img className="w-full" src={text} alt="" />

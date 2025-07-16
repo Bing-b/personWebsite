@@ -6,28 +6,29 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// 图标资源
+// 编程图标
+
 const ICONS = [
-  "/images/skill/javascript.svg",
-  "/images/skill/Python.svg",
-  "/images/skill/ChatGPT.svg",
-  "/images/skill/vitejs.svg",
-  "/images/skill/react.svg",
-  "/images/skill/sass.svg",
-  "/images/skill/Wordpress.svg",
-  "/images/skill/typescript.svg",
-  "/images/skill/nextjs.svg",
-  "/images/skill/css.svg",
-  "/images/skill/vue.svg",
-  "/images/skill/docker.svg",
-  "/images/skill/html.svg",
-  "/images/skill/nuxt.svg",
+  "/images/programming/js.png",
+  "/images/programming/python.png",
+  "/images/programming/chatgpt.png",
+  "/images/programming/vite.png",
+  "/images/programming/react.png",
+  "/images/programming/sass.png",
+  "/images/programming/wordpress.png",
+  "/images/programming/typescript.png",
+  "/images/programming/next.png",
+  "/images/programming/php.png",
+  "/images/programming/vue.png",
+  "/images/programming/gasp.png",
+  "/images/programming/tailwindcss.png",
+  "/images/programming/github.png",
 ];
 
 // 固定分布坐标（相对于中心）
 const POSITIONS = [
   { x: -430, y: 20 },
-  { x: 200, y: 420 },
+  { x: 200, y: 380 },
   { x: 120, y: -280 },
   { x: -760, y: 100 },
   { x: 600, y: -200 },

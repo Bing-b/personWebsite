@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
-// 顶部logo
+// 顶部轮播logo
 const images = [
   "/images/wise.webp",
   "/images/dropbox.webp",
@@ -111,7 +111,7 @@ export default function Hero() {
       </MotionItem>
 
       <MotionItem delay={0.3}>
-        <h1 className="text-7xl font-bold mt-10 text-center">
+        <h1 className="text-7xl font-bold mt-10 text-center font-Atkinson">
           Stay true, be you.
         </h1>
       </MotionItem>

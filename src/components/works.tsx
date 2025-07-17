@@ -1,12 +1,3 @@
-/** 作品集 */
-// export default function Works() {
-//   return (
-//     <div className="mt-[60px] mx-auto max-w-[1480px] bg-[#4040400f] rounded-4xl px-[100px] pt-[80px]">
-//       <p>作品</p>
-//       <img src={"/images/p1.png"} />
-//     </div>
-//   );
-// }
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -35,6 +26,7 @@ export default function Works() {
         xPercent: -100 * (totalSlides - 1),
         ease: "none",
         scrollTrigger: {
+          start: "top 10%",
           trigger: containerRef.current,
           pin: true, // 固定整个区域
           scrub: 1, // 平滑滚动驱动动画

@@ -44,9 +44,9 @@ const POSITIONS = [
 
 // 中间要显示的文字行
 const LINES = [
-  "前端技术？手拿把掐！",
-  "后端代码？略懂略懂~",
-  "领着实习生的钱，干着 CTO 的活",
+  "10+ open-source projects！",
+  "50+ web development skills",
+  "100+ projects contributed",
 ];
 
 export default function Skills() {
@@ -68,7 +68,7 @@ export default function Skills() {
       .timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 70%",
+          start: "top 30%",
           once: true,
         },
       })
@@ -102,7 +102,7 @@ export default function Skills() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=800", // 文字滚动显示区长度，可调整
+        end: `+=${LINES.length * 800}`, // 文字滚动显示区长度，可调整
         scrub: true,
         pin: true,
       },
@@ -110,12 +110,14 @@ export default function Skills() {
 
     tl.fromTo(
       linesRef.current,
-      { opacity: 0, y: 200 },
+      { opacity: 0, y: 300 },
       {
         opacity: 1,
         y: 0,
-        stagger: 0.5,
-        duration: 2,
+        stagger: {
+          each: 1, // 每一行完成一个动画之后再下一个
+        },
+        duration: 1,
         ease: "power2.out",
       }
     );
@@ -128,13 +130,15 @@ export default function Skills() {
     >
       {/* 中间文字容器（宽度800px） */}
       <div className="relative z-10 w-[800px] flex flex-col items-center justify-center text-center pointer-events-none">
-        <h1 className="text-[18px] font-bold mb-10">鄙人毕生（20-25）成就😂</h1>
+        <h1 className="text-[18px] font-bold mb-10">我能提供的技术支持😂</h1>
         <div className="space-y-[16px]">
           {LINES.map((line, i) => (
             <div
               key={i}
-              ref={(el) => (linesRef.current[i] = el)}
-              className="text-[36px] opacity-0 font-bold text-[#363636]"
+              ref={(el) => {
+                linesRef.current[i] = el;
+              }}
+              className="text-[36px] opacity-0 font-bold text-[#363636] font-[sans-serif]"
             >
               {line}
             </div>

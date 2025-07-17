@@ -2,9 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export", //导出静态站点
-  basePath: "/w_website",
-  assetPrefix: "/w_website/",
-  trailingSlash: true, // 推荐开启，避免 GitHub Pages 找不到路径
+  basePath: "/w_website", // 你的 GitHub 仓库名，必须加斜杠
+  assetPrefix: "/w_website/", // 静态资源路径前缀，必须以 / 开头、/ 结尾
 };
 
 export default nextConfig;

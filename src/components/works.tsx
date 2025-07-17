@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Image from "next/image";
 
 const workList = [
   "/images/p1.png",
@@ -46,14 +45,7 @@ export default function Works() {
     >
       <div className="w-full  bg-white py-5 px-6  overflow-hidden rounded-4xl">
         <div className="flex items-center gap-5">
-          <Image
-            src="/images/logo.png"
-            alt="Vercel Logo"
-            width={40}
-            height={30}
-            className="dark:invert"
-            priority
-          />
+          <img src="/images/logo.png" className="w-[40px]" alt="" />
           <p>个人作品</p>
         </div>
 

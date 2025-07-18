@@ -127,14 +127,16 @@ export default function Hero() {
       <MotionItem delay={0.7}>
         <div className="mt-14 flex items-center gap-5">
           <a
-            href=""
+            href="https://bing-b.github.io/vue3/"
+            target="_blank"
             className="flex items-center gap-1 px-4 h-[36px] py-2 bg-[#333] hover:bg-black text-white rounded-4xl text-sm  duration-300 transition"
           >
             <NextImg src="/images/cat.svg" width={16} height={16} alt="cat" />
             花猫乐园
           </a>
           <a
-            href=""
+            href="https://bing-b.github.io/BanBing/"
+            target="_blank"
             className="relative  px-4 py-2  h-[36px] font-bold rounded-full flex  text-sm gap-2 items-center justify-center   hover:bg-[#4040400f]  hover:shadow-border-[#4040403d] cursor-pointer transition-colors ease-out border border-[#40404029]"
           >
             访问 Banbing

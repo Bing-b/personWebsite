@@ -52,7 +52,7 @@ export default function Works() {
 
         <div className="flex w-[250vw] h-auto">
           {workList.map((text, i) => (
-            <div key={i} className="slide  flex items-center justify-center ">
+            <div key={i} className="slide flex items-center justify-center ">
               <NextImg
                 src={text}
                 className="w-full"

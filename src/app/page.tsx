@@ -2,14 +2,15 @@
 import Hero from "@/components/hero";
 import Works from "@/components/works";
 import Skills from "@/components/skills";
+import NextImg from "./nextImg";
 
 export default function Home() {
   return (
     <div className="relative  min-h-screen">
       <div className="relative  bg-white  rounded-b-4xl overflow-clip">
-        <header className="fixed  flex justify-between  w-[584px] rounded-full bg-[hsla(0,0%,93%,0.72)] backdrop-blur-xl  left-1/2 top-6 z-10 -translate-x-1/2 items-center gap-x-24 px-7 py-4">
+        <header className="fixed flex justify-between  w-[584px] rounded-full bg-[hsla(0,0%,93%,0.72)] backdrop-blur-xl  left-1/2 top-6 z-20 -translate-x-1/2 items-center gap-x-24 px-7 py-4">
           <div className="flex items-center gap-1">
-            <img className="w-[40px]" src="/images/logo.png" alt="" />
+            <NextImg src="/images/logo.png" width={40} height={40} alt="logo" />
             <p className="font-bold text-[16px] font-Atkinson">VIP</p>
           </div>
 
@@ -44,9 +45,8 @@ export default function Home() {
         <Works />
         <Skills />
 
-        {/* 上一个模块（推动 footer） */}
         <section className="min-h-screen bg-white flex items-center justify-center">
-          <h2 className="text-2xl font-semibold">上一个模块内容</h2>
+          <h2 className="text-2xl font-semibold">待续...</h2>
         </section>
       </div>
 
@@ -61,13 +61,36 @@ export default function Home() {
       >
         <div className="flex justify-between max-w-[1400px] mx-auto w-full">
           <div>
-            <img className="w-[60px] mb-5" src="/images/logo_w.png" alt="" />
+            <NextImg
+              className="mb-5"
+              src="/images/logo_w.png"
+              width={60}
+              height={40}
+              alt="logo"
+            />
             <p className="font-Atkinson">Stay true, be you.</p>
 
             <div className="flex items-center gap-5  mt-[100px]">
-              <img className="w-6" src="/images/github.svg" alt="" />
-              <img className="w-6" src="/images/juejin.svg" alt="" />
-              <img className="w-10" src="/images/csdn.svg" alt="" />
+              <NextImg
+                src="/images/github.svg"
+                width={24}
+                height={24}
+                alt="github"
+              />
+
+              <NextImg
+                src="/images/juejin.svg"
+                width={24}
+                height={24}
+                alt="juejin"
+              />
+
+              <NextImg
+                src="/images/csdn.svg"
+                width={40}
+                height={24}
+                alt="csdn"
+              />
             </div>
           </div>
           <div>

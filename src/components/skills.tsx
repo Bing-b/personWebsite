@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import NextImg from "@/app/nextImg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -149,15 +150,13 @@ export default function Skills() {
       {/* 图标层 */}
       <div className="absolute inset-0 pointer-events-none">
         {ICONS.map((src, i) => (
-          <img
+          <NextImg
             key={i}
+            className="icon absolute  opacity-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             src={src}
-            className="icon absolute w-18 h-18 opacity-0"
-            style={{
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
+            width={72}
+            height={72}
+            alt="skill"
           />
         ))}
       </div>

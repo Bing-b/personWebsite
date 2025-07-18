@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
+import NextImg from "@/app/nextImg";
 
 // 顶部轮播logo
 const images = [
@@ -92,14 +93,15 @@ export default function Hero() {
         <div className="relative w-[88px] h-[88px] rounded-xl ">
           {getStackedImages().map((src, i) => {
             const zIndex = 10 - i;
+            const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
             const yOffset = i * 18;
             const scale = 1 - i * 0.28;
             const grayscale = i === 0 ? "0%" : i === 1 ? "30%" : "80%";
             return (
               <motion.img
                 key={`${src}-${i}-${index}`}
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH}${src}`}
-                className="absolute w-full h-full object-cover rounded-3xl shadow-lg"
+                src={`${basePath}${src}`}
+                className="absolute w-full h-full object-cover rounded-3xl shadow-lg z-10"
                 initial={{ opacity: 0, y: -yOffset - 20, scale: scale - 0.1 }}
                 animate={{ opacity: 1, y: -yOffset, scale }}
                 transition={{ duration: 0.3 }}
@@ -128,7 +130,7 @@ export default function Hero() {
             href=""
             className="flex items-center gap-1 px-4 h-[36px] py-2 bg-[#333] hover:bg-black text-white rounded-4xl text-sm  duration-300 transition"
           >
-            <img className="w-4" src="/images/cat.svg" alt="" />
+            <NextImg src="/images/cat.svg" width={16} height={16} alt="cat" />
             花猫乐园
           </a>
           <a
@@ -137,7 +139,12 @@ export default function Hero() {
           >
             访问 Banbing
             <div className="w-6 h-6  rounded-full bg-[#40404014] p-1">
-              <img className="w-4" src="/images/right_arrow.svg" alt="" />
+              <NextImg
+                src="/images/right_arrow.svg"
+                width={16}
+                height={16}
+                alt="cat"
+              />
             </div>
           </a>
         </div>
@@ -153,11 +160,16 @@ export default function Hero() {
               key={index}
               className="flex gap-2 items-center transition duration-300 grayscale hover:grayscale-0 hover:scale-110"
             >
-              <img
-                className={`inline-block max-h-[28px] ${
+              <NextImg
+                className={`inline-block max-h-[28px] !w-auto ${
                   index === 0 ? "h-[50px]" : ""
-                }   ${index === 5 ? "h-[24px]" : ""}`}
+                }  ${index === 1 ? "h-[26px]" : ""}  ${
+                  index === 5 ? "h-[24px]" : ""
+                }`}
                 src={item.icon}
+                width={30}
+                height={30}
+                alt="cat"
               />
 
               <p

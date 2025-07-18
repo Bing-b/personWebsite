@@ -66,7 +66,6 @@ export default function Home() {
 
             <div className="flex items-center gap-5  mt-[100px]">
               <img className="w-6" src="/images/github.svg" alt="" />
-              <img className="w-6" src="/images/weixin.svg" alt="" />
               <img className="w-6" src="/images/juejin.svg" alt="" />
               <img className="w-10" src="/images/csdn.svg" alt="" />
             </div>

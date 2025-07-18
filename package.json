@@ -2,10 +2,10 @@
   "name": "bing_website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Bing-b.github.io/w_website",
+  "homepage": "https://Bing-b.github.io/personWebsite",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cross-env NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,6 +23,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
     "tailwindcss": "^4",

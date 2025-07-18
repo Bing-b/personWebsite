@@ -98,7 +98,7 @@ export default function Hero() {
             return (
               <motion.img
                 key={`${src}-${i}-${index}`}
-                src={src}
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}${src}`}
                 className="absolute w-full h-full object-cover rounded-3xl shadow-lg"
                 initial={{ opacity: 0, y: -yOffset - 20, scale: scale - 0.1 }}
                 animate={{ opacity: 1, y: -yOffset, scale }}

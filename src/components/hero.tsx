@@ -160,18 +160,16 @@ export default function Hero() {
           {technicals.map((item, index) => (
             <div
               key={index}
-              className="flex gap-2 items-center transition duration-300 grayscale hover:grayscale-0 hover:scale-110"
+              className="flex gap-2 items-center transition duration-300 !grayscale hover:!grayscale-0 hover:scale-110"
             >
               <NextImg
-                className={`inline-block max-h-[28px] !w-auto ${
-                  index === 0 ? "h-[50px]" : ""
-                }  ${index === 1 ? "h-[26px]" : ""}  ${
-                  index === 5 ? "h-[24px]" : ""
-                }`}
+                className={`inline-block h-[28px] !w-auto   ${
+                  index === 1 ? "!h-[22px]" : ""
+                }  ${index === 5 ? "!h-[24px]" : ""}`}
                 src={item.icon}
                 width={30}
-                height={30}
-                alt="cat"
+                height={28}
+                alt="logo"
               />
 
               <p

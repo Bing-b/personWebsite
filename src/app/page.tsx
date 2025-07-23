@@ -3,6 +3,7 @@ import Hero from "@/components/hero";
 import Works from "@/components/works";
 import Skills from "@/components/skills";
 import NextImg from "./nextImg";
+import WebWorks from "@/components/webworks";
 
 export default function Home() {
   return (
@@ -45,9 +46,11 @@ export default function Home() {
         <Works />
         <Skills />
 
-        <section className="min-h-screen bg-white flex items-center justify-center">
+        {/* <section className="min-h-screen bg-white flex items-center justify-center">
           <h2 className="text-2xl font-semibold">待续...</h2>
-        </section>
+        </section> */}
+
+        <WebWorks />
       </div>
 
       <footer

@@ -12,7 +12,7 @@ export default function Home() {
         <header className="fixed flex justify-between  w-[584px] rounded-full bg-[hsla(0,0%,93%,0.72)] backdrop-blur-xl  left-1/2 top-6 z-20 -translate-x-1/2 items-center gap-x-24 px-7 py-4">
           <div className="flex items-center gap-1">
             <NextImg src="/images/logo.png" width={40} height={40} alt="logo" />
-            <p className="font-bold text-[16px] font-Atkinson">VIP</p>
+            <p className="font-bold text-[16px] font-Atkinson">BING</p>
           </div>
 
           <a href="https://github.com/Bing-b" target="_blank">

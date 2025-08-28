@@ -18,27 +18,33 @@ const technicals = [
   {
     icon: "/images/nextjs.svg",
     text: "",
+    link: "https://nextjs.org/",
   },
   {
     icon: "/images/tailwindcss.svg",
     text: "tailwindcss",
+    link: "https://tailwindcss.com/",
   },
   {
     icon: "/images/React.svg",
     text: "React",
+    link: "https://react.dev/",
   },
   {
     icon: "/images/motion.avif",
     text: "Motion",
+    link: "https://motion.dev/",
   },
   {
     icon: "/images/Typescript.svg",
     text: "Typescript",
+    link: "https://www.typescriptlang.org/zh/",
   },
 
   {
     icon: "/images/GSAP.svg",
     text: "GSAP",
+    link: "https://gsap.com/",
   },
 ];
 
@@ -90,7 +96,7 @@ export default function Hero() {
   return (
     <div className="pt-[180px] flex flex-col justify-center items-center">
       <MotionItem delay={0.2}>
-        <div className="relative w-[88px] h-[88px] rounded-xl ">
+        <div className="relative w-[88px] h-[88px] rounded-xl">
           {getStackedImages().map((src, i) => {
             const zIndex = 10 - i;
             const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -158,7 +164,9 @@ export default function Hero() {
       <MotionItem delay={1}>
         <div className="flex items-center gap-10 mt-10">
           {technicals.map((item, index) => (
-            <div
+            <a
+              href={item.link}
+              target="_blank"
               key={index}
               className="flex gap-2 items-center transition duration-300 !grayscale hover:!grayscale-0 hover:scale-110"
             >
@@ -179,7 +187,7 @@ export default function Hero() {
               >
                 {item.text}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </MotionItem>

@@ -161,6 +161,7 @@ export default function Hero() {
       <MotionItem delay={0.8}>
         <p className="text-[#707070] text-sm mt-[100px]">感谢本站技术支持</p>
       </MotionItem>
+
       <MotionItem delay={1}>
         <div className="flex items-center gap-10 mt-10">
           {technicals.map((item, index) => (

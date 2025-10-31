@@ -13,6 +13,7 @@ export default function Works() {
       <div className="w-full  bg-white py-5 px-6  overflow-hidden rounded-4xl">
         <div className="flex items-center gap-5">
           <NextImg src="/images/logo.png" width={40} height={30} alt="logo" />
+          BING
         </div>
       </div>
     </div>

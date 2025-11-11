@@ -131,7 +131,9 @@ export default function Skills() {
     >
       {/* 中间文字容器（宽度800px） */}
       <div className="relative z-10 w-[800px] flex flex-col items-center justify-center text-center pointer-events-none">
-        <h1 className="text-[18px] font-bold mb-10">我能提供的技术支持😂</h1>
+        <h1 className="text-[18px] font-bold mb-10">
+          my achievement，but is fake😂
+        </h1>
         <div className="space-y-[16px]">
           {LINES.map((line, i) => (
             <div

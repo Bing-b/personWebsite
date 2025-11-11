@@ -135,11 +135,12 @@ export default function Hero() {
           <a
             href="https://bing-b.github.io/vue3/"
             target="_blank"
-            className="flex items-center gap-1 px-4 h-[36px] py-2 bg-[#333] hover:bg-black text-white rounded-4xl text-sm  duration-300 transition"
+            className="flex items-center gap-1 px-4 h-[36px] py-2 bg-[linear-gradient(to_bottom,rgb(64,64,64)_0%,rgb(26,26,26)_100%)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.25),3px_3px_3px_rgba(0,0,0,0.15)] hover:!bg-[linear-gradient(to_bottom,rgb(80,80,80)_0%,rgb(40,40,40)_100%)] text-white rounded-4xl text-sm  duration-300 transition"
           >
             <NextImg src="/images/cat.svg" width={16} height={16} alt="cat" />
             花猫乐园
           </a>
+
           <a
             href="https://bing-b.github.io/BanBing/"
             target="_blank"

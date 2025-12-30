@@ -8,6 +8,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const workList = [
   {
+    icon: "/images/p3_icon.svg",
+    name: "彩科生物",
+    url: "https://www.lychix.com/",
+    img: "/images/p3.png",
+    bg: "#000",
+    border: "#444",
+    font: "#fafafa",
+    view: "#000",
+    btnbg: "#fff",
+  },
+  {
+    icon: "/images/p5_icon.svg",
+    name: "鸣石基金",
+    url: "https://www.mingshiim.com/",
+    img: "/images/p5.png",
+    bg: "#dedede",
+    border: "#666",
+    font: "#333",
+    view: "#fff",
+    btnbg: "#000",
+  },
+  {
     icon: "/images/p1_icon.svg",
     name: "太子家具",
     url: "https://www.taizicasa.com/",
@@ -30,17 +52,6 @@ const workList = [
     btnbg: "#000",
   },
   {
-    icon: "/images/p3_icon.svg",
-    name: "彩科生物",
-    url: "https://www.lychix.com/",
-    img: "/images/p3.png",
-    bg: "#000",
-    border: "#444",
-    font: "#fafafa",
-    view: "#000",
-    btnbg: "#fff",
-  },
-  {
     icon: "/images/p4_icon.svg",
     name: "紫羚云",
     url: "https://www.gazellio.com/",
@@ -50,17 +61,6 @@ const workList = [
     font: "#250718",
     view: "#fff",
     btnbg: "#250718",
-  },
-  {
-    icon: "/images/p5_icon.svg",
-    name: "鸣石基金",
-    url: "https://www.mingshiim.com/",
-    img: "/images/p5.png",
-    bg: "#dedede",
-    border: "#666",
-    font: "#333",
-    view: "#fff",
-    btnbg: "#000",
   },
 ];
 

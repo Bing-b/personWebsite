@@ -93,24 +93,24 @@ export default function WebWorks() {
   return (
     <div
       ref={slideRef}
-      className="px-8 py-48 relative bg-[#080808] overflow-hidden"
+      className="px-8 py-48 relative bg-[#f4f4f7] overflow-hidden"
     >
-      {/* 背景装饰 */}
-      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white/5 to-transparent opacity-10"></div>
-      <div className="absolute bottom-[20%] right-[-5%] w-[600px] h-[600px] bg-red-600/5 rounded-full blur-[160px] pointer-events-none"></div>
+      {/* 背景装饰 - 柔和的亮色渐变 */}
+      <div className="absolute top-0 left-0 w-full h-80 bg-gradient-to-b from-white to-transparent opacity-100"></div>
+      <div className="absolute bottom-[10%] right-[-5%] w-[800px] h-[800px] bg-red-600/[0.03] rounded-full blur-[160px] pointer-events-none"></div>
 
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="flex flex-col items-center mb-32">
           <div className="flex items-center gap-4 mb-8">
-            <span className="w-16 h-[2px] bg-white/20"></span>
-            <p className="font-black text-[10px] text-white/30 font-mono tracking-[0.5em] uppercase">
-              Production_Gallery
+            <span className="w-16 h-[2px] bg-black/10"></span>
+            <p className="font-black text-[10px] text-black/30 font-mono tracking-[0.5em] uppercase">
+              Selected_Works
             </p>
-            <span className="w-16 h-[2px] bg-white/20"></span>
+            <span className="w-16 h-[2px] bg-black/10"></span>
           </div>
-          <h2 className="text-6xl md:text-8xl font-black text-white font-Atkinson tracking-tighter uppercase text-center leading-[0.9]">
+          <h2 className="text-6xl md:text-8xl font-black text-black font-Atkinson tracking-tighter uppercase text-center leading-[0.9]">
             DIGITAL <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/40 to-white/10">ARTIFACTS</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black/20 to-black/60">ARTIFACTS</span>
           </h2>
         </div>
 
@@ -120,40 +120,46 @@ export default function WebWorks() {
               key={index}
               className="web-work-card group relative p-[1px] rounded-[48px] overflow-hidden transition-all duration-700 hover:-translate-y-4"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent group-hover:from-red-600/30 transition-all duration-700"></div>
+              {/* 边框高光效果 */}
+              <div className="absolute inset-0 bg-gradient-to-b from-zinc-200 to-transparent group-hover:from-red-600/30 transition-all duration-700"></div>
 
               <div
-                className="relative overflow-hidden rounded-[47px] bg-[#121212] border border-white/5 shadow-2xl"
+                className="relative overflow-hidden rounded-[47px] bg-white border border-zinc-200 shadow-[0_10px_50px_rgba(0,0,0,0.03)] group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] transition-all duration-700"
               >
-                <div className="p-10 pb-0">
-                  <div className="flex justify-between items-start mb-8">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:border-white/20 transition-all">
-                        <NextImg src={i.icon} width={28} height={28} alt="icon" className="object-contain" />
+                <div className="p-10 pb-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="flex items-center gap-5">
+                      <div className="w-14 h-14 rounded-2xl bg-zinc-50 flex items-center justify-center border border-zinc-100 group-hover:border-red-600/20 transition-all">
+                        <NextImg src={i.icon} width={32} height={32} alt="icon" className="object-contain" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="font-black text-white text-lg tracking-tight">{i.name}</span>
-                        <span className="text-[10px] font-mono text-white/30 uppercase tracking-widest">Client_Project</span>
+                        <span className="font-black text-zinc-900 text-xl tracking-tight leading-none mb-1.5">{i.name}</span>
+                        <span className="text-[10px] font-mono text-zinc-400 font-bold uppercase tracking-widest">Digital_Architecture</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="px-10 relative">
-                  <div className="relative overflow-hidden rounded-t-[32px] shadow-[0_-20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:-translate-y-3 group-hover:scale-[1.02]">
-                    <NextImg src={i.img} width={600} height={400} className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700" alt="work" />
+                <div className="px-10 pb-10 relative">
+                  <div className="relative overflow-hidden rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.05)] transition-all duration-700 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.1)]">
+                    <NextImg src={i.img} width={600} height={400} className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity duration-700" alt="work" />
 
                     {/* 悬浮覆盖层 */}
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center backdrop-blur-[2px]">
                       <a
                         href={i.url}
                         target="_blank"
-                        className="px-8 py-3 bg-white text-black font-black font-Atkinson rounded-full text-xs uppercase tracking-widest hover:scale-110 transition-transform shadow-2xl"
+                        className="px-8 py-3 bg-black text-white font-black font-Atkinson rounded-full text-[10px] uppercase tracking-[0.2em] hover:scale-110 transition-transform shadow-2xl"
                       >
-                        Launch Project
+                        Launch Preview
                       </a>
                     </div>
                   </div>
+                </div>
+
+                {/* 装饰细节 */}
+                <div className="absolute top-8 right-8 text-[12px] font-mono text-zinc-100 group-hover:text-red-600/10 transition-colors font-black">
+                  #{String(index + 1).padStart(2, '0')}
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 @theme {
   --font-Atkinson: "Atkinson";
+  --font-OPPOSansB: "OPPOSansB";
 }
 
 :root {
@@ -30,7 +31,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "NotoSanSC", Helvetica, sans-serif;
+  font-family: "OPPOSansL", Helvetica, sans-serif;
   height: 100%;
   cursor: url("/images/cursor.png"), auto;
 }
@@ -43,4 +44,34 @@ body {
 @font-face {
   font-family: "Atkinson";
   src: url("../../public/fonts/Atkinson-Hyperlegible-Regular-102.woff");
+}
+
+@font-face {
+  font-family: "OPPOSansB";
+  src: url("../../public/fonts/Font-OPPOSans/OPPOSans-B.ttf");
+}
+
+@font-face {
+  font-family: "OPPOSansL";
+  src: url("../../public/fonts/Font-OPPOSans/OPPOSans-L.ttf");
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(400px);
+  }
 }

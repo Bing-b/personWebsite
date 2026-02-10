@@ -9,44 +9,10 @@ const images = [
   "/images/wise.webp",
   "/images/dropbox.webp",
   "/images/cosmos.webp",
-  "/images/airbnb.webp",
+  "/images/head.jpg",
   "/images/loom.webp",
 ];
 
-// 本站技术支持
-const technicals = [
-  {
-    icon: "/images/nextjs.svg",
-    text: "",
-    link: "https://nextjs.org/",
-  },
-  {
-    icon: "/images/tailwindcss.svg",
-    text: "tailwindcss",
-    link: "https://tailwindcss.com/",
-  },
-  {
-    icon: "/images/React.svg",
-    text: "React",
-    link: "https://react.dev/",
-  },
-  {
-    icon: "/images/motion.avif",
-    text: "Motion",
-    link: "https://motion.dev/",
-  },
-  {
-    icon: "/images/Typescript.svg",
-    text: "Typescript",
-    link: "https://www.typescriptlang.org/zh/",
-  },
-
-  {
-    icon: "/images/GSAP.svg",
-    text: "GSAP",
-    link: "https://gsap.com/",
-  },
-];
 
 /** 淡入动画容器 */
 export function MotionItem({
@@ -141,7 +107,7 @@ export default function Hero() {
         </MotionItem>
 
         <MotionItem delay={0.4}>
-          <h1 className="text-8xl md:text-[80px] font-black text-center font-Atkinson tracking-tighter text-black leading-none mb-12">
+          <h1 className="text-8xl md:text-[80px] font-black text-center font-OPPOSansB tracking-tighter text-black/90 leading-none mb-12">
             Stay true , be you
           </h1>
         </MotionItem>
@@ -149,7 +115,7 @@ export default function Hero() {
         <MotionItem delay={0.6}>
           <div className="max-w-2xl px-6">
             <p className="text-[#888] text-xl md:text-xl font-medium text-center leading-relaxed">
-              世上只有一种英雄主义，就是在认清生活真相之后依然热爱生活。
+              世上只有一种英雄主义，就是在认清生活真相之后依然热爱生活
               <span className="block mt-4 text-xs font-black text-black/20 uppercase tracking-[0.4em] font-mono">Real_Heroism // Romain Rolland</span>
             </p>
           </div>
@@ -187,7 +153,7 @@ export default function Hero() {
         </MotionItem>
 
         {/* 底部装饰：滚动提示 */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-20">
+        <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-20">
           <span className="text-[10px] font-black uppercase tracking-[0.5em] font-mono">Scroll_To_Deploy</span>
           <div className="w-[1px] h-20 bg-gradient-to-b from-black to-transparent"></div>
         </div>

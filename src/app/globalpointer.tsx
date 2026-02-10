@@ -22,7 +22,7 @@ export default function GlobalPointer() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[9999] w-4 h-4 rounded-full !bg-blue-500 pointer-events-none mix-blend-difference"
+      className="fixed top-0 left-0 z-[9999] w-3 h-3 rounded-full bg-black pointer-events-none mix-blend-difference shadow-sm"
       style={{
         x: springX,
         y: springY,

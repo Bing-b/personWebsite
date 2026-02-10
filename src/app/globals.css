@@ -1,7 +1,9 @@
 @import "tailwindcss";
+
 @theme {
   --font-Atkinson: "Atkinson";
 }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

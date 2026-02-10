@@ -44,7 +44,7 @@ function Loader() {
  */
 function Model() {
     // 使用用户最近更新的模型路径
-    const gltf = useLoader(GLTFLoader, "/models/sazabi_msn-04_gundam.glb");
+    const gltf = useLoader(GLTFLoader, `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/models/sazabi_msn-04_gundam.glb`);
     const modelRef = useRef<THREE.Group>(null);
 
     useFrame((state) => {

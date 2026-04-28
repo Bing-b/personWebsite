@@ -10,7 +10,7 @@ export default function Footer() {
     useEffect(() => {
         const updateTime = () => {
             const now = new Date();
-            setTime(now.toLocaleTimeString("en-US", {
+            setTime(now.toLocaleTimeString("zh-CN", {
                 hour12: false,
                 hour: "2-digit",
                 minute: "2-digit",
@@ -22,9 +22,7 @@ export default function Footer() {
         return () => clearInterval(timer);
     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+
 
     return (
         <footer
@@ -98,7 +96,7 @@ export default function Footer() {
             </div>
 
             <div className="w-full mt-5 max-w-[1400px] py-6 flex justify-between items-center text-[10px] font-black text-white/10 uppercase tracking-[0.4em] border-t border-white/5 relative z-10">
-                <p>© BING_SYSTEMS 2020–2025. ALL RIGHTS RESERVED</p>
+                <p>© BING_SYSTEMS 2020–2026. ALL RIGHTS RESERVED</p>
             </div>
         </footer>
     );
